@@ -7,9 +7,15 @@ var app = express();  // make express app
 var server = require('http').createServer(app);
 
 // set up the view engine
+app.set('views',path.resolve(__dirname,'views'));
+app.set('view engine','ejs');
 // manage our entries
 // set up the logger
 // GETS
+app.get('/', function (req, res) {
+  res.render('index');
+});
+
 // POSTS
 // 404
 
